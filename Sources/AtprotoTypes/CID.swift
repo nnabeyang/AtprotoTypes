@@ -29,7 +29,7 @@ public struct CID: Sendable, Equatable, Hashable {
 			throw AtprotoTypeError.invalidBase32Data
 		}
 
-		guard let decoded = body.base32DecodedData else {
+		guard let decoded = try? Base32.decode(body) else {
 			throw AtprotoTypeError.invalidBase32Data
 		}
 
@@ -39,7 +39,7 @@ public struct CID: Sendable, Equatable, Hashable {
 	public var string: String {
 		// CID is DASL-compatible (https://atproto.com/specs/data-model)
 		// and DASL CID uses lowercase base-32 (https://dasl.ing/cid.html)
-		"b" + bytes.base32EncodedStringNoPadding.lowercased()
+		"b" + Base32.encode(bytes, options: .pad(false))
 	}
 }
 

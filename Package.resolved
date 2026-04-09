@@ -1,15 +1,6 @@
 {
-  "originHash" : "15bbacf4767724296518603acd32582b980f64f01f442f72ffc562267fc06073",
+  "originHash" : "ce5f4eb30d62bb0d1734a3b9069c788c65ec486c57fe48f65cc314937ac77703",
   "pins" : [
-    {
-      "identity" : "base32",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Jarema/Base32.git",
-      "state" : {
-        "revision" : "7f723a2e55f1c76e7c79263aebf89dbfcd58e77d",
-        "version" : "0.10.2"
-      }
-    },
     {
       "identity" : "germconvenience",
       "kind" : "remoteSourceControl",
@@ -26,6 +17,15 @@
       "state" : {
         "revision" : "9f542610331815e29cc3821d3b6f488db8715517",
         "version" : "1.6.0"
+      }
+    },
+    {
+      "identity" : "swift-bases",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-libp2p/swift-bases.git",
+      "state" : {
+        "revision" : "96615d4b582f9f6536d8278304ce2a64c8e5288a",
+        "version" : "0.2.0"
       }
     },
     {

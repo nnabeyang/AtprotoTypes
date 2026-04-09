@@ -14,7 +14,7 @@ let package = Package(
 		)
 	],
 	dependencies: [
-		.package(url: "https://github.com/Jarema/Base32.git", from: "0.10.2"),
+		.package(url: "https://github.com/swift-libp2p/swift-bases.git", .upToNextMajor(from: "0.0.1")),
 		.package(
 			url: "https://github.com/germ-network/GermConvenience.git",
 			from: "0.1.1"
@@ -29,7 +29,7 @@ let package = Package(
 		.target(
 			name: "AtprotoTypes",
 			dependencies: [
-				"Base32",
+				.product(name: "Base32", package: "swift-bases"),
 				"GermConvenience",
 				.product(name: "Crypto", package: "swift-crypto"),
 			]
